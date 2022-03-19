@@ -9,18 +9,18 @@
 
 우리는 아래 **WEB 부분**에 링크를 걸 것이다.
 
-![image-20220319214310257](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319214310257.png)
+![image-20220319214310257](C:./이미지/image-20220319214310257.png)
 
 - 링크를 클릭하게 되면 지금 아래 HTML 로 나오지만 Welcome에 해당하는 메시지가 나오게 할 것이다.
 
-![image-20220319214420455](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319214420455.png)
+![image-20220319214420455](C:./이미지/image-20220319214420455.png)
 
 - 그리고 **HTML, CSS, JavaScript 리스트를 클릭**하게 되면 
   **클릭한 것에 해당하는 Content가** 위 영역에 출력되게 할 것이다.
 
 1. 그것을 하기위해선 먼저 **WEB 부분에 링크**를 달겠다.
 
-   ![image-20220319215057896](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319215057896.png)
+   ![image-20220319215057896](C:./이미지/image-20220319215057896.png)
 
 2. 그 다음에 **우리는 리스트에 각각의 이벤트를 설치**할 것이다. (**다음 시간**에) 
 
@@ -30,11 +30,11 @@
 
 3. App 컴포넌트의 **state 값에다가 mode 기본 값으로 welcome을 줄 것**이다.
 
-![image-20220319215042090](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319215042090.png)
+![image-20220319215042090](C:./이미지/image-20220319215042090.png)
 
 4. **mode가 welcome 일 때** Content **영역에 표시할 텍스트도 아래와 같이 지정**하겠다.
 
-![image-20220319215304665](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319215304665.png)
+![image-20220319215304665](C:./이미지/image-20220319215304665.png)
 
 5. 리엑트에서는 **props, state 값이 바뀌**잖아요 ?  
    - 그러면 **그 state를 가지고 있는 컴포넌트에 render 함수가 < 다시 호출 >** 된다. 
@@ -45,21 +45,21 @@
 
 7. 우리는 **mode의 값에 따라 만들어지는 랜더링 결과가 달라지게** 아래와 같이 **조건문을 사용**해 보겠다.
 
-![image-20220319220621482](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319220621482.png)
+![image-20220319220621482](C:./이미지/image-20220319220621482.png)
 
 8. 위 **_title 값**을 Content 컴포넌트의 **props 데이터 값으로 지정**해 준다.
 
-![image-20220319220736675](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319220736675.png)
+![image-20220319220736675](C:./이미지/image-20220319220736675.png)
 
 9. 위 처럼 수정해 주고 나서 **실행해 보면** 아래와 같이  **welcome 모드의 title, desc 값이 보여지게** 된다.
 
-![image-20220319220822228](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319220822228.png)
+![image-20220319220822228](C:./이미지/image-20220319220822228.png)
 
 10. **각 컴포넌트 render() 함수 밑에 consle을 찍어 볼 것**이다.
 
 - console.log() 코드를 넣고나서 실행하여 개발자 도구 콘솔을 보면 아래와 같다.
 
-  ![image-20220319221125645](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319221125645.png)
+  ![image-20220319221125645](C:./이미지/image-20220319221125645.png)
 
 - Subject , TOC, Content가 **차례대로 호출되는 것을 볼 수 있다**.
 
@@ -71,7 +71,7 @@
 
 App.js 에 일단 Subject 컴포넌트를 **잠시 주석**을 하고 아래와 같이 Subject 컴포넌트 안 html 코드를 넣어 주면서 **onClick 이벤트를 심어주고**, a태그는 클릭했을 때 **href 가 가르키는 페이지로 이동한다라는 기본적인 동작 방법**이 있다. 바로 이 기본적인 동작 방법을 못하게 하고 싶어서  **e.preventDefault(); 를 추가**했다.
 
-![image-20220319222345292](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319222345292.png)
+![image-20220319222345292](C:./이미지/image-20220319222345292.png)
 
 - **이벤트를 설치하는 방법**을 알게 되었고,  **이벤트가 발생했을 때 그 태그의 기본적인 동작을 막는 방법**도 배웠다.
 
@@ -88,7 +88,7 @@ App.js 에 일단 Subject 컴포넌트를 **잠시 주석**을 하고 아래와 
 따라서, 아래와 같이 리엑트가 시키는 대로 this.setState({인자}) 인자에 
 **mode : 'welcome'으로 바꾸고 싶다**라고 **지정**하면 된다.
 
-![image-20220319223546365](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319223546365.png)
+![image-20220319223546365](C:./이미지/image-20220319223546365.png)
 
 
 
@@ -100,11 +100,11 @@ App.js 에 일단 Subject 컴포넌트를 **잠시 주석**을 하고 아래와 
 
 - onClick 이벤트의 function 함수에는 this가 아무 값이 없다.
 
-  ![image-20220319224236121](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319224236121.png)
+  ![image-20220319224236121](C:./이미지/image-20220319224236121.png)
 
 - **.bind(this)에서 this는** App 컴포넌트 자체를 가르키는 객체를 
   이 아래 function 함수 내에 **this는 그 객체가 되게 하는 것**.
-  ![image-20220319224708851](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220319224708851.png)
+  ![image-20220319224708851](C:./이미지/image-20220319224708851.png)
 
 
 
@@ -132,7 +132,7 @@ render() 함수 위 constructor(props){ } 에서는 편하게 하셔도 괜찮�
 
 1. 이전 시간 까지 작성했던 아래 코드 **39~50번째 줄을 주석**처리 하고, **Subject 컴포넌트 태그를 살린다**.
 
-![image-20220320014945525](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320014945525.png)
+![image-20220320014945525](C:./이미지/image-20220320014945525.png)
 
 
 
@@ -140,7 +140,7 @@ render() 함수 위 constructor(props){ } 에서는 편하게 하셔도 괜찮�
 
 - 사용자는 아래와 같이 코드를 수정한다.
 
-![image-20220320020027851](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320020027851.png)
+![image-20220320020027851](C:./이미지/image-20220320020027851.png)
 
 onChangePage 라고 하는 함수는 어떤 형태로 Subject에 전달하게 되나? 
 
@@ -150,7 +150,7 @@ onChangePage 라고 하는 함수는 어떤 형태로 Subject에 전달하게 �
 
 3. **Subject.js** 에 가서 아래와 같이 코드를 수정
 
-![image-20220320015601816](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320015601816.png)
+![image-20220320015601816](C:./이미지/image-20220320015601816.png)
 
 - **onChangePage 라는 이벤트를 우리가 만들고 함수를 설치**해주면, 그 이벤트가 발생되었을 때 **props로 전달**된 **onChangePage 라는 함수를 호출**해 주면 되는 것이다.
 
@@ -175,11 +175,11 @@ onChangePage 라고 하는 함수는 어떤 형태로 Subject에 전달하게 �
 
 일단 App.js에 아래와 같이 코드를 수정해 준다.
 
-![image-20220320021358016](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320021358016.png)
+![image-20220320021358016](C:./이미지/image-20220320021358016.png)
 
 TOC.js에도 아래와 같이 코드를 수정해 준다.
 
-![image-20220320021442045](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320021442045.png)
+![image-20220320021442045](C:./이미지/image-20220320021442045.png)
 
 **현재는** 따라서 mode가 **해당 리스트를 누르**면 **read 모드로 바뀌게만 된다**. 
 
@@ -197,9 +197,9 @@ TOC.js에도 아래와 같이 코드를 수정해 준다.
 
 1. 먼저 아래와 같이 App.js 에 코드를 추가해 준다.
 
-![image-20220320022108699](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320022108699.png)
+![image-20220320022108699](C:./이미지/image-20220320022108699.png)
 
-![image-20220320022143517](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320022143517.png)
+![image-20220320022143517](C:./이미지/image-20220320022143517.png)
 
 
 
@@ -210,18 +210,18 @@ TOC.js에도 아래와 같이 코드를 수정해 준다.
 
 2. App.js에 아래와 같이 코드 수정
 
-   ![image-20220320023314502](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320023314502.png)
+   ![image-20220320023314502](C:./이미지/image-20220320023314502.png)
 
 3. TOC.js에 아래와 같이 코드 수정
 
-![image-20220320023244497](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320023244497.png)
+![image-20220320023244497](C:./이미지/image-20220320023244497.png)
 
 a태그가 가지고 있는 접두사가 data-라고 시작하는 속성은  **dataset이라고하는 특수한 것을 통해 접근**할 수 있다.
 
 그러면 현재 **해당 리스트를 클릭할 때마다** 해당 리스트 id 번호가 App.js onChangePage 이벤트 함수 **id 인자로 잘 넘어온다**.
 
 하지만 본문에는 변화가 없어서 개발자 도구로 봤더니 **selected_content_id는 아래와 같이 문자열** 이였다.
-![image-20220320024455774](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320024455774.png)
+![image-20220320024455774](C:./이미지/image-20220320024455774.png)
 
 
 
@@ -231,13 +231,13 @@ a태그가 가지고 있는 접두사가 data-라고 시작하는 속성은  **d
 
 아래와 같이 수정을 해주면 **해당 리스트를 클릭한 것**에 대해 **본문이 잘 바뀌는 것을 확인할 수** 있다.
 
-![image-20220320024722587](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320024722587.png)
+![image-20220320024722587](C:./이미지/image-20220320024722587.png)
 
 
 
 **2번째 방식**으로는 **TOC.js에 아래와 같이 코드를 수정**한다.
 
-![image-20220320025052093](C:\Users\SSAFY\Desktop\React-Study\리엑트공부\이미지\image-20220320025052093.png)
+![image-20220320025052093](C:./이미지/image-20220320025052093.png)
 
 
 
