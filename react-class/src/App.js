@@ -2,15 +2,20 @@ import './App.css';   // App 컴포넌트의 디자인을 App안에 넣는다라
 import { Component } from 'react';
 import Subject from './components/Subject'
 import TOC from './components/TOC'
-import Content from './components/Content'
-
+import ReadContent from './components/ReadContent'
+import Control from './components/Control';
+import CreateContent from './components/CreateContent';
 class App extends Component{ // 여기 블록 부분이 컴포넌트를 만드는 코드
   // 어떠한 컴포넌트가 실행될 때 render 라는 함수보다 먼저 실행되면서,
   // 그 컴포넌트를 초기화 시켜주고 싶은 코드는 constructor 안에 다가 코드를 작성한다.
   constructor(props) {
     super(props);
+    // state 값으로 하지 않고, 객체의 값으로 한 이유는
+    // 어떤 데이터를 push 할 때 id 값을 뭐로 할때 사용하는 정보 일 뿐
+    // UI에 영향을 줄 이유가 없기 때문에 state 값으로 안 한다. -> 하게 되면 불필요한 랜더링이 됨.
+    this.max_content_id = 3; 
     this.state = {
-      mode: 'read',
+      mode: 'create',
       selected_content_id:2, // 기본적으로 2번 컨텐트가 선택되게 할 것이다.
       subject: { title: 'WEB', sub: 'World wide web!' },
       welcome: {title:'Welcome', desc:'Hello, React!!!' },
@@ -23,10 +28,11 @@ class App extends Component{ // 여기 블록 부분이 컴포넌트를 만드�
   }
   render() { // render 라는 메서드를 가지고 있다.
     console.log('App render');
-    var _title, _desc = null;
+    var _title, _desc, _article = null;
     if (this.state.mode === 'welcome') {
       _title = this.state.welcome.title;
       _desc = this.state.welcome.desc;
+      _article = <ReadContent title={_title} desc={_desc}></ReadContent>
     } else if (this.state.mode === 'read') {
       var i = 0;
       while (i < this.state.contents.length) {
@@ -38,6 +44,26 @@ class App extends Component{ // 여기 블록 부분이 컴포넌트를 만드�
         }
         i = i + 1;
       }
+      _article =<ReadContent title={_title} desc={_desc}></ReadContent>
+    } else if (this.state.mode === 'create') {
+      _article = <CreateContent onSubmit={function(_title, _desc) {
+        console.log(_title, _desc);
+        this.max_content_id = this.max_content_id + 1;  
+        
+        // this.state.contents.push({ id: this.max_content_id, title: _title, desc: _desc });
+        
+        // concat을 사용한 방법
+        // var _contents = this.state.contents.concat(
+        //   { id: this.max_content_id, title: _title, desc: _desc }
+        // )
+        // Array.from을 통해 contents 배열을 복사하기. 주소가 달라서 원본 참조 x.
+        var newContents = Array.from(this.state.contents);
+        newContents.push({ id: this.max_content_id, title: _title, desc: _desc });
+        // add content to this.state.contents
+        this.setState({
+          contents:newContents
+        });
+      }.bind(this)}></CreateContent>
     }
     console.log('render', this);
     return (
@@ -60,7 +86,14 @@ class App extends Component{ // 여기 블록 부분이 컴포넌트를 만드�
             });
           }.bind(this)}
           data={this.state.contents}></TOC>
-        <Content title={_title} desc={_desc}></Content>
+        <Control onChangeMode={function (_mode) {
+          this.setState({
+            mode: _mode // 자식 컴포넌트에서 받은 mode 값으로 변경해 준다.
+          });
+        }.bind(this)}
+        >
+        </Control>
+        {_article}
       </div>
     );
   }

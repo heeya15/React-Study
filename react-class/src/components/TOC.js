@@ -1,6 +1,16 @@
 import React, { Component } from 'react'; 
 
 class TOC extends Component{ // subject라는 컴포넌트를 만든 다는 의미.
+  shouldComponentUpdate(newProps, newState) {
+    console.log('TOC render shouldComponentUpdate'); 
+    console.log(newProps.data);
+    console.log(this.props.data);
+    // 현재 데이터와, 새로운 props 데이터가 바뀌지 않을 경우 
+    if (this.props.data === newProps.data) {
+      return false; // render () 함수 호출 x.
+    }
+    return true; // 바뀌었다면 render() 함수 호출
+  }
   render() { // funtion을 생략 함 -> 함수이다.
       console.log('TOC render');  
       var lists = []; 
