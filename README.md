@@ -7,4 +7,5 @@
 - [생활코딩 -React 컴포넌트제작, state](./리엑트공부/생활코딩-React_컴포넌트제작,state.md)
 - [생활코딩 -React 이벤트](./리엑트공부/생활코딩-React_이벤트.md)
 - [생활코딩-React_Create기능구현](./리엑트공부/생활코딩-React_Create기능구현.md)
+- [생활코딩-React_Update_Delete기능구현](./리엑트공부/생활코딩-React_Update_Delete기능구현.md)
 

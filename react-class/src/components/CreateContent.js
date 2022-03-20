@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class CreateContent extends Component{ // subject라는 컴포넌트를 만든 다는 의미.
   render() { // funtion을 생략 함 -> 함수이다.
-    console.log('Content render');
+    console.log('CreateContent render');
     return (
       <article>
           <h2>Create</h2>
